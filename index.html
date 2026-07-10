@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steven Sun — Personal Homepage</title>
+  <meta name="description" content="Personal homepage of Steven (Zhengkun) Sun, student at Imperial College London.">
+  <style>
+    /* ========== 基础设置 ========== */
+    :root {
+      --bg: #0f1115;          /* 页面背景色 */
+      --card: #171a21;        /* 卡片背景色 */
+      --text: #e8eaed;        /* 正文颜色 */
+      --muted: #9aa0a6;       /* 次要文字颜色 */
+      --accent: #6aa9ff;      /* 强调色（链接、标题装饰）*/
+      --border: #2a2e37;      /* 边框色 */
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.7;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+    /* ========== 顶部导航 ========== */
+    nav {
+      position: sticky; top: 0;
+      background: rgba(15, 17, 21, 0.85);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
+    nav .container {
+      display: flex; justify-content: space-between; align-items: center;
+      height: 56px;
+    }
+    nav .logo { font-weight: 700; color: var(--text); }
+    nav .links a { color: var(--muted); margin-left: 20px; font-size: 0.95rem; }
+    nav .links a:hover { color: var(--text); text-decoration: none; }
+
+    /* ========== 首屏 ========== */
+    header { padding: 96px 0 72px; }
+    header h1 { font-size: 2.6rem; line-height: 1.2; margin-bottom: 12px; }
+    header h1 span { color: var(--accent); }
+    header p.tagline { font-size: 1.15rem; color: var(--muted); max-width: 560px; }
+    .social { margin-top: 28px; display: flex; gap: 14px; flex-wrap: wrap; }
+    .social a {
+      border: 1px solid var(--border); border-radius: 8px;
+      padding: 8px 16px; font-size: 0.9rem; color: var(--text);
+    }
+    .social a:hover { border-color: var(--accent); text-decoration: none; }
+
+    /* ========== 通用区块 ========== */
+    section { padding: 48px 0; border-top: 1px solid var(--border); }
+    section h2 {
+      font-size: 1.4rem; margin-bottom: 24px;
+    }
+    section h2::before { content: "# "; color: var(--accent); }
+
+    /* ========== 项目卡片 ========== */
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 640px) { .cards { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 20px;
+    }
+    .card h3 { font-size: 1.05rem; margin-bottom: 8px; }
+    .card p { font-size: 0.92rem; color: var(--muted); }
+
+    /* ========== 页脚 ========== */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0; text-align: center;
+      color: var(--muted); font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <div class="logo">stevenszk.com</div>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="container" id="top">
+    <h1>Hi, I'm <span>Steven Sun</span> 👋</h1>
+    <p class="tagline">
+      <!-- 改这里：一句话介绍自己 -->
+      Student at Imperial College London. Interested in technology, and building things on the internet — this site is my first one.
+    </p>
+    <div class="social">
+      <!-- 改这里：换成你自己的链接，不需要的删掉整行 -->
+      <a href="mailto:zhengkun.sun24@imperial.ac.uk">Email</a>
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+    </div>
+  </header>
+
+  <section class="container" id="about">
+    <h2>About</h2>
+    <p>
+      <!-- 改这里：自我介绍，可以写学习经历、兴趣方向 -->
+      I'm Zhengkun (Steven) Sun, currently studying at Imperial College London.
+      This is where a short introduction about yourself goes — what you study,
+      what you care about, and what you're working towards.
+    </p>
+  </section>
+
+  <section class="container" id="projects">
+    <h2>Projects</h2>
+    <div class="cards">
+      <!-- 改这里：每个 card 是一个项目，可复制粘贴增加更多 -->
+      <div class="card">
+        <h3>This Website</h3>
+        <p>My personal homepage, hand-built with plain HTML/CSS and deployed on Cloudflare Pages.</p>
+      </div>
+      <div class="card">
+        <h3>Project Two</h3>
+        <p>A short description of another project — coursework, a hobby build, or anything you're proud of.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="contact">
+    <h2>Contact</h2>
+    <p>
+      The best way to reach me is by email:
+      <a href="mailto:zhengkun.sun24@imperial.ac.uk">zhengkun.sun24@imperial.ac.uk</a>
+    </p>
+  </section>
+
+  <footer>
+    © 2026 Steven Sun · stevenszk.com
+  </footer>
+
+</body>
+</html>
