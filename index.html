@@ -3,25 +3,20 @@
   ═══════════════════════════════════════════════════════════════════
   Steven Sun — 个人主页（单文件，无任何外部依赖）
   ═══════════════════════════════════════════════════════════════════
-  需要改的地方都标了【改这里】，全局搜索即可。快速清单：
-    1. Hero 区   — 一句话介绍、简介段落
-    2. About     — 自我介绍两段 + 快速信息（城市/学校/语言）
-    3. Projects  — 除第一个"Personal Website"外，其余 3 个是示例项目，换成你自己的
-    4. Skills    — 技能标签按实际增删
-    5. Experience— 两条经历是示例，换成真实经历
-    6. Education — 专业名称、中学名称、A-Level 科目
-    7. CV        — 把你的简历 PDF 命名为 cv.pdf 放在 index.html 同目录
-    8. LinkedIn  — 搜索 your-linkedin 换成你的 LinkedIn 地址
+  内容已按 2026-07 版 CV 填好。还可以改进的地方（搜索【改这里】）：
+    1. About 头像 — 想放真人照片就把 div.avatar 换成 <img>
+    2. Projects  — 各项目如有 GitHub 仓库 / 演示视频，补上链接
+    3. cv.pdf    — 简历更新后替换根目录的 cv.pdf 即可
   ═══════════════════════════════════════════════════════════════════
 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Steven Sun — Engineering Student at Imperial College London</title>
-  <meta name="description" content="Personal website of Steven (Zhengkun) Sun — engineering student at Imperial College London. Projects, skills, experience and CV.">
+  <title>Steven Sun — Mechanical Engineering Student at Imperial College London</title>
+  <meta name="description" content="Personal website of Zhengkun (Steven) Sun — MEng Mechanical Engineering student at Imperial College London. Robotics, rocketry, design & manufacturing projects, skills, experience and CV.">
   <meta property="og:title" content="Steven Sun — Personal Website">
-  <meta property="og:description" content="Engineering student at Imperial College London. Projects, skills, experience and CV.">
+  <meta property="og:description" content="MEng Mechanical Engineering student at Imperial College London. Robotics, rocketry, and design & manufacturing projects.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://stevenszk.com">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563eb'/%3E%3Ctext x='32' y='43' font-family='Segoe UI,Arial' font-size='34' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
@@ -256,6 +251,23 @@
     .g2 { background: linear-gradient(135deg, #0891b2, #059669); }
     .g3 { background: linear-gradient(135deg, #d97706, #dc2626); }
     .g4 { background: linear-gradient(135deg, #7c3aed, #db2777); }
+    .g5 { background: linear-gradient(135deg, #0ea5e9, #6366f1); }
+    .g6 { background: linear-gradient(135deg, #475569, #94a3b8); }
+    .award {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: .74rem; font-weight: 700; letter-spacing: .02em;
+      color: #92400e; background: rgba(245, 158, 11, .18);
+      padding: 4px 11px; border-radius: 999px;
+    }
+    :root[data-theme="dark"] .award { color: #fbbf24; background: rgba(245, 158, 11, .14); }
+    .pub-note {
+      margin-top: 22px; display: flex; gap: 14px; align-items: baseline;
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 18px 24px; box-shadow: var(--shadow);
+    }
+    .pub-note .pub-icon { font-size: 1.3rem; }
+    .pub-note p { color: var(--muted); font-size: .93rem; }
+    .pub-note strong { color: var(--text); }
     .project-body { display: flex; flex-direction: column; flex: 1; padding: 22px 24px 20px; }
     .project h3 { font-size: 1.12rem; margin-bottom: 8px; letter-spacing: -.01em; }
     .project .desc { color: var(--muted); font-size: .94rem; margin-bottom: 16px; flex: 1; }
@@ -315,6 +327,7 @@
       color: var(--muted); font-size: .95rem; margin-bottom: 7px;
     }
     .t-item li::before { content: "▹"; position: absolute; left: 0; color: var(--accent); }
+    .t-item li strong { color: var(--text); }
     .t-note { color: var(--muted); font-size: .95rem; }
 
     /* ═══════════ CV ═══════════ */
@@ -385,13 +398,12 @@
     <div class="container">
       <p class="kicker">Hi there, I'm</p>
       <h1><span class="grad">Steven Sun</span> 👋</h1>
-      <!-- 【改这里】一句话介绍自己（参考站是 "I like making cool robots"）-->
-      <p class="tagline">I like building things — from code to circuits.</p>
-      <!-- 【改这里】两三行的简介 -->
+      <p class="tagline">I like making things move — robots, rockets, and everything in between.</p>
       <p class="intro">
-        I'm an engineering student at <strong>Imperial College London</strong>, curious about how
-        ideas turn into real, working products. This site is where I collect the things I make
-        and learn along the way.
+        MEng Mechanical Engineering student at <strong>Imperial College London</strong>
+        (Year 1 Dean's List). I design, prototype and build — from award-winning competition
+        robots to CubeSat payloads — with a growing obsession for machine learning, mechatronics
+        and sustainable technology.
       </p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#projects">
@@ -407,8 +419,7 @@
         <a href="https://github.com/steven-szk" target="_blank" rel="noopener" aria-label="GitHub">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4 18.3 4.3 18.3 4.3c.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
         </a>
-        <!-- 【改这里】换成你的 LinkedIn 地址 -->
-        <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/zhengkun-sun-044681336" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
         </a>
         <a href="mailto:zhengkun.sun24@imperial.ac.uk" aria-label="Email">
@@ -433,23 +444,27 @@
             <div class="avatar">SS</div>
           </div>
           <div class="about-text">
-            <!-- 【改这里】自我介绍第一段：你是谁、在学什么 -->
             <p>
-              Hello! I'm <strong>Zhengkun (Steven) Sun</strong>, an undergraduate engineering student at
-              <strong>Imperial College London</strong>. I enjoy taking things apart to see how they work —
-              and, more importantly, putting them back together into something new.
+              Hello! I'm <strong>Zhengkun (Steven) Sun</strong>, an MEng Mechanical Engineering student at
+              <strong>Imperial College London</strong> (2024 – 2028), on the Year 1 Dean's List
+              (ranked 18 of 210). I love the whole journey from sketch to working hardware —
+              design, prototyping, and manufacturing, with great attention to detail.
             </p>
-            <!-- 【改这里】第二段：兴趣方向、目前在做什么、目标 -->
             <p>
-              Right now I'm focused on building a solid foundation in engineering fundamentals while
-              teaching myself to code properly. Outside of coursework I like turning small ideas into
-              small projects — including this website, which I designed and hand-coded from scratch.
+              I'm passionate about challenges in <strong>machine learning, robotics, mechatronics,
+              aerospace and sustainable technology</strong>. Most of what I've learned comes from
+              student-led projects — leading robot builds at the Robotics Society, engineering a
+              CubeSat payload for a rocket, and shipping plenty of 3D-printed prototypes along the way.
             </p>
             <div class="facts">
-              <!-- 【改这里】快速信息，按需增删 -->
               <span class="fact">📍 London, UK</span>
               <span class="fact">🎓 Imperial College London</span>
               <span class="fact">💬 English · 中文</span>
+              <span class="fact">🏂 Snowboarding</span>
+              <span class="fact">🧗 Climbing</span>
+              <span class="fact">🤿 Scuba diving</span>
+              <span class="fact">📷 Photography</span>
+              <span class="fact">🥾 Hiking</span>
             </div>
           </div>
         </div>
@@ -462,11 +477,97 @@
         <div class="section-head reveal">
           <span class="kicker">Projects</span>
           <h2>Things I've built</h2>
-          <p class="sub">A selection of coursework, hobby builds and experiments. More on my GitHub.</p>
+          <p class="sub">Competition builds, coursework and hobby projects — several of them award-winning.</p>
         </div>
         <div class="project-grid">
 
-          <!-- 项目 1：这个是真实的，可以保留 -->
+          <!-- Snowfield Rescue Supply Robot -->
+          <article class="project reveal">
+            <div class="project-banner g5" aria-hidden="true">🤖</div>
+            <div class="project-body">
+              <h3>Snowfield Rescue Supply Robot</h3>
+              <p class="desc">
+                A fully working prototype of a rescue-supply robot for powder snow, built in 48 hours
+                at Makathon 2026 (City &amp; Guilds Union). Rethought robotic locomotion in snow with
+                an Archimedes' screw drive. <!-- 【改这里】有演示视频/仓库的话在下方补链接 -->
+              </p>
+              <div class="tags">
+                <span class="award">🥈 2nd of 24 teams</span>
+                <span class="tag">Robotics</span><span class="tag">Mechanism Design</span>
+                <span class="tag">Rapid Prototyping</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Portable CPAP Device -->
+          <article class="project reveal">
+            <div class="project-banner g2" aria-hidden="true">🫁</div>
+            <div class="project-body">
+              <h3>Portable CPAP Device</h3>
+              <p class="desc">
+                An ergonomic, portable medical-grade CPAP device to alleviate sleep apnea — fully
+                designed and presented within one week for Design Week, in collaboration with medical
+                students at Brunel University. I led most of the calculations and mechanical design.
+              </p>
+              <div class="tags">
+                <span class="tag">Medical Device</span><span class="tag">Mechanical Design</span>
+                <span class="tag">Ergonomics</span><span class="tag">CAD</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- F24 Drive Transmission -->
+          <article class="project reveal">
+            <div class="project-banner g3" aria-hidden="true">⚙️</div>
+            <div class="project-body">
+              <h3>Drive Transmission for F24 Car</h3>
+              <p class="desc">
+                Led the design and manufacture of a constant-ratio gearbox for an F24 race car — turned
+                shaft and gear, milled plate, 3D-printed components and a CNC-machined aluminium block —
+                with stress and lifetime analysis of every component to international design standards.
+              </p>
+              <div class="tags">
+                <span class="tag">Gearbox Design</span><span class="tag">Machining &amp; CNC</span>
+                <span class="tag">Stress Analysis</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Wheelchair Umbrella Stand -->
+          <article class="project reveal">
+            <div class="project-banner g4" aria-hidden="true">☂️</div>
+            <div class="project-body">
+              <h3>Wheelchair Umbrella Stand</h3>
+              <p class="desc">
+                A modular clip-on umbrella stand for wheelchairs, created for the Inclusive Additive
+                Design Challenge and fast-prototyped through six 3D-printed iterations.
+              </p>
+              <div class="tags">
+                <span class="award">🏆 People's Choice Award</span>
+                <span class="tag">Inclusive Design</span><span class="tag">3D Printing</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Microprocessor Digital Clock -->
+          <article class="project reveal">
+            <div class="project-banner g6" aria-hidden="true">⏰</div>
+            <div class="project-body">
+              <h3>Microprocessor Digital Clock</h3>
+              <p class="desc">
+                A digital clock built on an ARM Cortex RA2E1 MCU — time display and adjustment,
+                temperature &amp; humidity sensing, battery management, a 3D-printed case and custom
+                front panel. Open-sourced on OSHWHUB for the 8th JLC Electric Race.
+                <!-- 【改这里】可补 OSHWHUB 链接 -->
+              </p>
+              <div class="tags">
+                <span class="tag">ARM Cortex</span><span class="tag">PCB Design</span>
+                <span class="tag">Embedded</span><span class="tag">Open Source</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Personal Website -->
           <article class="project reveal">
             <div class="project-banner g1" aria-hidden="true">🌐</div>
             <div class="project-body">
@@ -492,72 +593,17 @@
             </div>
           </article>
 
-          <!-- 【改这里】示例项目 2 —— 换成你的真实项目 -->
-          <article class="project reveal">
-            <div class="project-banner g2" aria-hidden="true">🤖</div>
-            <div class="project-body">
-              <h3>Maze-Solving Robot</h3>
-              <p class="desc">
-                A small two-wheeled robot that maps a maze with IR sensors and finds the shortest
-                path using a flood-fill algorithm. Built as a team coursework project.
-              </p>
-              <div class="tags">
-                <span class="tag">Arduino</span><span class="tag">C++</span>
-                <span class="tag">Electronics</span><span class="tag">Teamwork</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/steven-szk" target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4 18.3 4.3 18.3 4.3c.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
-                  Code
-                </a>
-              </div>
-            </div>
-          </article>
+        </div>
 
-          <!-- 【改这里】示例项目 3 —— 换成你的真实项目 -->
-          <article class="project reveal">
-            <div class="project-banner g3" aria-hidden="true">📊</div>
-            <div class="project-body">
-              <h3>London Cycling Data Explorer</h3>
-              <p class="desc">
-                Analysed TfL open data on Santander bike hires to visualise how usage patterns shift
-                with weather, season and time of day.
-              </p>
-              <div class="tags">
-                <span class="tag">Python</span><span class="tag">pandas</span>
-                <span class="tag">Matplotlib</span><span class="tag">Open Data</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/steven-szk" target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4 18.3 4.3 18.3 4.3c.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
-                  Code
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <!-- 【改这里】示例项目 4 —— 换成你的真实项目 -->
-          <article class="project reveal">
-            <div class="project-banner g4" aria-hidden="true">📅</div>
-            <div class="project-body">
-              <h3>Study Planner</h3>
-              <p class="desc">
-                A lightweight web app that turns my timetable and assignment deadlines into a
-                realistic daily plan, so I stop over-promising to future me.
-              </p>
-              <div class="tags">
-                <span class="tag">Python</span><span class="tag">Flask</span>
-                <span class="tag">SQLite</span>
-              </div>
-              <div class="project-links">
-                <a href="https://github.com/steven-szk" target="_blank" rel="noopener">
-                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4 18.3 4.3 18.3 4.3c.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
-                  Code
-                </a>
-              </div>
-            </div>
-          </article>
-
+        <!-- 论文 -->
+        <div class="pub-note reveal">
+          <span class="pub-icon" aria-hidden="true">📝</span>
+          <p>
+            <strong>Publication (Mar 2023):</strong>
+            <em>Application of Edge Intelligence and Vehicle-to-Vehicle Communication in
+            Next-Generation Autonomous Driving.</em>
+            <!-- 【改这里】有 DOI 或链接的话可以加上 -->
+          </p>
         </div>
       </div>
     </section>
@@ -571,40 +617,41 @@
           <p class="sub">Tools and technologies I use — always learning more.</p>
         </div>
         <div class="skills-grid">
-          <!-- 【改这里】三个分类和里面的标签都按你的实际情况增删 -->
-          <div class="skill-card reveal">
-            <div class="skill-icon" aria-hidden="true">💻</div>
-            <h3>Programming</h3>
-            <div class="chips">
-              <span class="chip">Python</span>
-              <span class="chip">C / C++</span>
-              <span class="chip">MATLAB</span>
-              <span class="chip">JavaScript</span>
-              <span class="chip">HTML &amp; CSS</span>
-              <span class="chip">LaTeX</span>
-            </div>
-          </div>
-          <div class="skill-card reveal">
-            <div class="skill-icon" aria-hidden="true">🛠️</div>
-            <h3>Tools &amp; Frameworks</h3>
-            <div class="chips">
-              <span class="chip">Git &amp; GitHub</span>
-              <span class="chip">VS Code</span>
-              <span class="chip">NumPy / pandas</span>
-              <span class="chip">Arduino</span>
-              <span class="chip">Raspberry Pi</span>
-              <span class="chip">Linux</span>
-            </div>
-          </div>
           <div class="skill-card reveal">
             <div class="skill-icon" aria-hidden="true">⚙️</div>
-            <h3>Engineering &amp; Design</h3>
+            <h3>Mechanical &amp; Simulation</h3>
             <div class="chips">
-              <span class="chip">CAD (Fusion 360)</span>
+              <span class="chip">SolidWorks</span>
+              <span class="chip">Fusion 360</span>
+              <span class="chip">FEA · Abaqus</span>
+              <span class="chip">ANSYS Granta</span>
               <span class="chip">3D Printing</span>
-              <span class="chip">Circuit Design</span>
-              <span class="chip">Soldering</span>
-              <span class="chip">Technical Writing</span>
+              <span class="chip">Milling · Turning · CNC</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-icon" aria-hidden="true">💻</div>
+            <h3>Software &amp; Machine Vision</h3>
+            <div class="chips">
+              <span class="chip">Python</span>
+              <span class="chip">C++</span>
+              <span class="chip">Java</span>
+              <span class="chip">YOLO · U-Net</span>
+              <span class="chip">SWI-Prolog</span>
+              <span class="chip">LaTeX</span>
+              <span class="chip">Microsoft 365</span>
+            </div>
+          </div>
+          <div class="skill-card reveal">
+            <div class="skill-icon" aria-hidden="true">🔌</div>
+            <h3>Electronics &amp; Embedded</h3>
+            <div class="chips">
+              <span class="chip">PCB Design · EDA</span>
+              <span class="chip">Arduino</span>
+              <span class="chip">ESP32</span>
+              <span class="chip">Raspberry Pi</span>
+              <span class="chip">Jetson</span>
+              <span class="chip">ARM MCUs</span>
             </div>
           </div>
         </div>
@@ -620,25 +667,42 @@
         </div>
         <div class="timeline">
 
-          <!-- 【改这里】示例经历 1 —— 换成你的真实经历（实习/社团/兼职/志愿）-->
           <div class="t-item reveal">
             <p class="t-date">Oct 2025 — Present</p>
-            <h3>Member, Software Team</h3>
+            <h3>Talks Officer</h3>
             <p class="t-org">Imperial College Robotics Society · London, UK</p>
             <ul>
-              <li>Contributing to the control software for the society's annual robot competition entry.</li>
-              <li>Learning embedded C++ and version-control workflows in a real team codebase.</li>
+              <li>Lead-designed the society's entries for three national autonomous robotics competitions — and won all three, scoring an order of magnitude more points than the runner-up each time.</li>
+              <li>Worked across the whole robot: machine vision system and algorithms, embedded code, Python, and mechanical design, including a custom-designed PCB for the system.</li>
             </ul>
           </div>
 
-          <!-- 【改这里】示例经历 2 -->
           <div class="t-item reveal">
-            <p class="t-date">2024 — Present</p>
-            <h3>Private Tutor — Maths &amp; Physics</h3>
-            <p class="t-org">Self-employed · London, UK</p>
+            <p class="t-date">Sep 2024 — Oct 2025</p>
+            <h3>Payload Engineer</h3>
+            <p class="t-org">Imperial College London Rocketry · London, UK</p>
             <ul>
-              <li>Tutoring GCSE and A-Level students in maths and physics.</li>
-              <li>Designing practice problems and explaining concepts from first principles.</li>
+              <li>Designed a 3U CubeSat payload flying inside the team's main rocket, PLUTO.</li>
+              <li>Collaborated with a Natural History Museum research team studying the effects of rocket vibration on cyanobacteria — the payload carries a spectrometer that talks to the flight controller over I2C.</li>
+            </ul>
+          </div>
+
+          <div class="t-item reveal">
+            <p class="t-date">Spring 2024</p>
+            <h3>Course Lead — Arduino Course</h3>
+            <p class="t-org">Hongwen School · Qingdao, China</p>
+            <ul>
+              <li>Initiated and taught a one-term Arduino and circuit-testing course, covering control, temperature &amp; humidity sensing, motor driving, ultrasonic sensors and RFID.</li>
+            </ul>
+          </div>
+
+          <div class="t-item reveal">
+            <p class="t-date">Sep 2022 — Jun 2024</p>
+            <h3>Founder — SayBooks</h3>
+            <p class="t-org">Hongwen School · Qingdao, China</p>
+            <ul>
+              <li>Founded the school's first and only second-hand book platform to cut textbook waste — managed the book database and built a WeChat mini-program to coordinate sales.</li>
+              <li>Worked alongside senior school management and grew it into a club that continued hosting regular events.</li>
             </ul>
           </div>
 
@@ -656,22 +720,24 @@
         <div class="timeline">
 
           <div class="t-item reveal">
-            <p class="t-date">2024 — Present</p>
-            <!-- 【改这里】写上你的具体专业，例如 "MEng Electrical and Electronic Engineering" -->
-            <h3>Imperial College London</h3>
-            <p class="t-org">Undergraduate, Faculty of Engineering · London, UK</p>
+            <p class="t-date">2024 — 2028</p>
+            <h3>MEng Mechanical Engineering — Imperial College London</h3>
+            <p class="t-org">London, UK</p>
             <ul>
-              <li>Relevant modules: mathematics, programming, engineering design. <!-- 【改这里】写具体课程 --></li>
-              <li>Awards &amp; activities: add scholarships, dean's list, societies here. <!-- 【改这里】 --></li>
+              <li><strong>Year 1 Dean's List</strong> — ranked 18 of 210.</li>
+              <li>Courses: Mathematics, Computing, Mechatronics, Materials, Stress Analysis, Mechanics, Dynamics, Fluid Mechanics, Thermodynamics, Heat Transfer, Design &amp; Manufacture, Economics Organisations &amp; Society.</li>
             </ul>
           </div>
 
           <div class="t-item reveal">
-            <p class="t-date">— 2024</p>
-            <!-- 【改这里】你的高中名称和成绩 -->
-            <h3>Secondary School</h3>
-            <p class="t-org">Your school name · City, Country</p>
-            <p class="t-note">A-Levels: Mathematics, Further Mathematics, Physics. <!-- 【改这里】改成实际科目和成绩 --></p>
+            <p class="t-date">2020 — 2024</p>
+            <h3>Hongwen School, Qingdao Campus</h3>
+            <p class="t-org">Qingdao, China</p>
+            <ul>
+              <li>A-Levels: <strong>A*A*A*A*A*</strong> — Maths, Further Maths, Physics, Chemistry, Computer Science.</li>
+              <li>British Physics Olympiad R1 <strong>Global Gold</strong> · Senior Mathematics Challenge <strong>Global Gold</strong> · NHSDLC Debate Octofinalist.</li>
+              <li>Founder of the Aurora Cup Debate Challenge · Prefect (Student Leader) · House Captain.</li>
+            </ul>
           </div>
 
         </div>
@@ -689,7 +755,7 @@
             I'll send over the latest version.
           </p>
           <div class="cv-actions">
-            <!-- 【改这里】把你的简历 PDF 命名为 cv.pdf，放在 index.html 同一个文件夹里 -->
+            <!-- 简历更新后：替换根目录的 cv.pdf 即可 -->
             <a class="btn btn-primary" href="cv.pdf" download="Steven_Sun_CV.pdf">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Download CV (PDF)
@@ -718,8 +784,7 @@
         <a href="https://github.com/steven-szk" target="_blank" rel="noopener" aria-label="GitHub">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4 18.3 4.3 18.3 4.3c.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
         </a>
-        <!-- 【改这里】换成你的 LinkedIn 地址 -->
-        <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/zhengkun-sun-044681336" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
         </a>
         <a href="mailto:zhengkun.sun24@imperial.ac.uk" aria-label="Email">
