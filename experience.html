@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!-- stevenszk.com — Experience 页（含 Education）· 共享样式/脚本见 assets/ · 首页 index.html 顶部有维护说明 -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience — Steven Sun</title>
+  <meta name="description" content="Experience and education of Steven Sun — Imperial College Robotics Society, Imperial College London Rocketry, and MEng Mechanical Engineering at Imperial College London.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563eb'/%3E%3Ctext x='32' y='43' font-family='Segoe UI,Arial' font-size='34' font-weight='700' fill='white' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+  <script>
+    (function () {
+      document.documentElement.classList.add('js');
+      var t = localStorage.getItem('theme');
+      if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">steven<span>szk</span>.com</a>
+      <div class="nav-right">
+        <div class="nav-links" id="navLinks">
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="skills.html">Skills</a>
+          <a href="experience.html" class="active">Experience</a>
+          <a class="cv-link" href="cv.html">CV</a>
+        </div>
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark / light theme">
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <section>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Experience</span>
+          <h1>Where I've worked &amp; contributed</h1>
+        </div>
+        <div class="timeline">
+
+          <div class="t-item reveal">
+            <p class="t-date">Oct 2025 — Present</p>
+            <h3>Talks Officer</h3>
+            <p class="t-org">Imperial College Robotics Society · London, UK</p>
+            <ul>
+              <li>Lead-designed the society's entries for three national autonomous robotics competitions — and won all three, scoring an order of magnitude more points than the runner-up each time.</li>
+              <li>Worked across the whole robot: machine vision system and algorithms, embedded code, Python, and mechanical design, including a custom-designed PCB for the system.</li>
+            </ul>
+          </div>
+
+          <div class="t-item reveal">
+            <p class="t-date">Sep 2024 — Oct 2025</p>
+            <h3>Payload Engineer</h3>
+            <p class="t-org">Imperial College London Rocketry · London, UK</p>
+            <ul>
+              <li>Designed a 3U CubeSat payload flying inside the team's main rocket, PLUTO.</li>
+              <li>Collaborated with a Natural History Museum research team studying the effects of rocket vibration on cyanobacteria — the payload carries a spectrometer that talks to the flight controller over I2C.</li>
+            </ul>
+          </div>
+
+          <div class="t-item reveal">
+            <p class="t-date">Spring 2024</p>
+            <h3>Course Lead — Arduino Course</h3>
+            <p class="t-org">Hongwen School · Qingdao, China</p>
+            <ul>
+              <li>Initiated and taught a one-term Arduino and circuit-testing course, covering control, temperature &amp; humidity sensing, motor driving, ultrasonic sensors and RFID.</li>
+            </ul>
+          </div>
+
+          <div class="t-item reveal">
+            <p class="t-date">Sep 2022 — Jun 2024</p>
+            <h3>Founder — SayBooks</h3>
+            <p class="t-org">Hongwen School · Qingdao, China</p>
+            <ul>
+              <li>Founded the school's first and only second-hand book platform to cut textbook waste — managed the book database and built a WeChat mini-program to coordinate sales.</li>
+              <li>Worked alongside senior school management and grew it into a club that continued hosting regular events.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Education</span>
+          <h2>Education</h2>
+        </div>
+        <div class="timeline">
+
+          <div class="t-item reveal">
+            <p class="t-date">2024 — 2028</p>
+            <h3>MEng Mechanical Engineering — Imperial College London</h3>
+            <p class="t-org">London, UK</p>
+            <ul>
+              <li><strong>Year 1 Dean's List</strong> — ranked 18 of 210.</li>
+              <li>Courses: Mathematics, Computing, Mechatronics, Materials, Stress Analysis, Mechanics, Dynamics, Fluid Mechanics, Thermodynamics, Heat Transfer, Design &amp; Manufacture, Economics Organisations &amp; Society.</li>
+            </ul>
+          </div>
+
+          <div class="t-item reveal">
+            <p class="t-date">2020 — 2024</p>
+            <h3>Hongwen School, Qingdao Campus</h3>
+            <p class="t-org">Qingdao, China</p>
+            <ul>
+              <li>A-Levels: <strong>A*A*A*A*A*</strong> — Maths, Further Maths, Physics, Chemistry, Computer Science.</li>
+              <li>British Physics Olympiad R1 <strong>Global Gold</strong> · Senior Mathematics Challenge <strong>Global Gold</strong> · NHSDLC Debate Octofinalist.</li>
+              <li>Founder of the Aurora Cup Debate Challenge · Prefect (Student Leader) · House Captain.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="contact">
+    <div class="container">
+      <span class="kicker">Contact</span>
+      <h2>Get in touch</h2>
+      <p class="contact-note">
+        Whether it's a project idea, a question, or just to say hi — my inbox is always open.
+      </p>
+      <a class="email-link" href="mailto:zhengkun.sun24@imperial.ac.uk">zhengkun.sun24@imperial.ac.uk</a>
+      <div class="social-row">
+        <a href="https://github.com/steven-szk" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4 18.3 4.3 18.3 4.3c.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/zhengkun-sun-044681336" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+        <a href="mailto:zhengkun.sun24@imperial.ac.uk" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+      <p class="copyright">
+        © <span id="year">2026</span> Steven Sun · <a href="https://stevenszk.com">stevenszk.com</a> ·
+        Built by hand with plain HTML, CSS &amp; JS — <a href="https://github.com/steven-szk/My-WebPage" target="_blank" rel="noopener">source</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+</body>
+</html>
